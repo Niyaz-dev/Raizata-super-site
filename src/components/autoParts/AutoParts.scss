@@ -1,0 +1,18 @@
+.auto-parts {
+  &__part-containe {
+    margin-left: -16px;
+    margin-top: -16px;
+  }
+  &__buttons-container {
+    padding-top: 20px;
+    margin-left: -16px;
+  }
+  &__button {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+  &__single-part {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+}
