@@ -1,27 +1,35 @@
 import {Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography} from "@mui/material";
 import base from './base.jpeg'
+import {FC} from "react";
 
-export const SinglePart = () => {
+interface SinglePartProps {
+    imgSrc: string
+    sparePart: string
+    originNumber: string
+    description: string
+}
+
+export const SinglePart: FC<SinglePartProps> = ({imgSrc, sparePart,originNumber, description}) => {
     return <Card sx={{maxWidth: 345}}>
         <CardActionArea>
             <CardMedia
                 component="img"
-                height="140"
-                src={base}
+                height="250"
+                src={imgSrc}
                 alt="green iguana"
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    Топливная Рампа
+                    {sparePart}
                 </Typography>
                 <Typography gutterBottom variant="h6" component="div">
                     Volkswagen Jetta 6 2012г.
                 </Typography>
                 <Typography gutterBottom variant="subtitle1" component="div">
-                    Номер запчасти: 06K133317H
+                    Номер запчасти: {originNumber}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    Доставка в любой Город. Поставки из Японии и Швеции. Гарантия. Аналоги (Совместимость с ДВС): , CPLA, CPPA. 2.0 TSI. 155 kBт 210 л/с.
+                    {description}
                 </Typography>
             </CardContent>
         </CardActionArea>
